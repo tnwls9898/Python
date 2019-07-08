@@ -1,0 +1,8 @@
+a = input("이름 입력 : ")
+b = int(input("학번 입력 : "))
+c = float(input("학점 입력 : "))
+
+print("==== 결과 출력 ====")
+print("%s" % a)
+print("%d" % b)
+print("%.2f" % c)
