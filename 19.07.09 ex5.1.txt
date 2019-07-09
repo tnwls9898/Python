@@ -1,0 +1,55 @@
+MENU1, MENU2, MENU3 = "아메리카노", "카페라떼", "마끼야또" #메뉴이름
+PRICE1, PRICE2, PRICE3 = 2000, 2500, 3000 #메뉴단가
+
+cnt1, cnt2, cnt3 = 0, 0, 0 # 메뉴수량
+total = 0 #총금액
+
+quit = 0 #거짓으로 초기화
+
+while True :
+
+    print("\n==== 슈먼 카페 ====")
+    print("1. %s" % MENU1)
+    print("2. %s" % MENU2)
+    print("3. %s" % MENU3)
+    print("4. 주문종료\n")
+
+    menu = int(input("메뉴를 입력해주세요 => "))
+
+    if menu == 4 : #주문 종료
+        quit = 1
+        
+
+    elif menu == 1 or menu == 2 or menu == 3 :
+        num = int(input("수량을 입력해주세요 => "))
+
+    else :
+        print("잘못입력되었습니다. 다시 입력해주세요.")
+
+        
+    if menu != 4 :
+        if menu == 1 :
+            cnt1 = cnt1 + num
+            price = PRICE1
+        
+
+        elif menu == 2 :
+            cnt2 = cnt2 + num
+            price = PRICE2
+    
+
+        elif menu == 3 : 
+            cnt3 = cnt3 + num
+            price = PRICE3
+
+        total = total + price*num
+
+    print("\n**** 총 주문 내역 ****")
+    print("1. %s : %d잔" % (MENU1, cnt1))
+    print("2. %s : %d잔" % (MENU2, cnt2))
+    print("3. %s : %d잔" % (MENU3, cnt3))
+    print("총금액 : %d원" % total)
+
+
+    if quit == 1 :
+        break 
