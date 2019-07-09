@@ -1,0 +1,59 @@
+sum = 0
+a = 0
+b = 0
+c = 0
+
+while True :
+
+
+
+    print("\n==== 슈먼 카페 ====")
+    print("1. 아메리카노 : 2000원")
+    print("2. 카페라떼 : 2500원")
+    print("3. 마끼야또 : 3000원")
+    print("4. 주문종료\n")
+
+    menu = int(input("메뉴를 입력해주세요 => "))
+
+    if menu > 4 :
+            print("잘못 입력되었습니다. 다시 입력해주세요")
+            print("\n**** 총 주문 내역 ****")
+            print("1. 아메리카노 : %d잔" % a)
+            print("2. 카페라떼 : %d잔" % b)
+            print("3. 마끼야또 : %d잔" % c)
+            print("총금액 : %d원" % sum)
+
+
+            continue
+
+    if menu == 4 :
+            print("주문을 종료합니다")
+            print("\n**** 총 주문 내역 ****")
+            print("1. 아메리카노 : %d잔" % a)
+            print("2. 카페라떼 : %d잔" % b)
+            print("3. 마끼야또 : %d잔" % c)
+            print("총금액 : %d원" % sum)
+
+            break
+        
+    num = int(input("수량을 입력해주세요 => "))
+
+    if menu == 1 :
+            a = a + num 
+            sum = sum + 2000*num
+
+    elif menu == 2 :
+            b = b + num
+            sum = sum + 2500*num
+
+    elif menu == 3 :
+        
+            c = c + num
+            sum = sum + 3000*num
+
+        
+    print("\n**** 총 주문 내역 ****")
+    print("1. 아메리카노 : %d잔" % a)
+    print("2. 카페라떼 : %d잔" % b)
+    print("3. 마끼야또 : %d잔" % c)
+    print("총금액 : %d원" % sum)
