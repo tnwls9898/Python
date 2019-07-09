@@ -1,0 +1,12 @@
+hap = 0
+
+i =0
+while i <=100 :
+    i = i + 1
+    hap = hap + i
+    
+
+    if hap > 1000 :
+        break
+
+print(i)
